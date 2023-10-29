@@ -17,5 +17,14 @@
     "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.0"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mabelheiner/ellsworth-barbell-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mabelheiner/ellsworth-barbell-api/issues"
+  },
+  "homepage": "https://github.com/mabelheiner/ellsworth-barbell-api#readme"
 }

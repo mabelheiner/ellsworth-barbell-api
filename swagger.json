@@ -21,7 +21,7 @@
         }
       }
     },
-    "/exercises/exercises": {
+    "/exercises/": {
       "get": {
         "description": "",
         "produces": [
@@ -41,11 +41,14 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "201": {
+            "description": "Created"
           }
         }
       }
     },
-    "/exercises/exercises/{id}": {
+    "/exercises/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -67,9 +70,6 @@
       },
       "put": {
         "description": "",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "id",
@@ -81,14 +81,14 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
           }
         }
       },
       "delete": {
         "description": "",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "id",
