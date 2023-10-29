@@ -5,7 +5,7 @@
     "description": "Workout API",
     "version": "1.0.0"
   },
-  "host": "https://ellsworth-barbell.onrender.com",
+  "host": "ellsworth-barbell.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

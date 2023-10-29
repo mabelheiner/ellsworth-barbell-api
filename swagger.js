@@ -5,7 +5,7 @@ const doc = {
         title: 'Ellsworth Barbell',
         description: 'Workout API'
     },
-    host: 'https://ellsworth-barbell.onrender.com',
+    host: 'ellsworth-barbell.onrender.com',
     schemes: ['https']
 };
 
