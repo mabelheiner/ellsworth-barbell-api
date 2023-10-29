@@ -1,0 +1,17 @@
+{
+  "name": "ellsworth-barbell-api",
+  "version": "1.0.0",
+  "description": "Api for exercises at the ellsworth barbell gym.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "nodemon server.js"
+  },
+  "author": "Mabel Heiner",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
