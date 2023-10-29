@@ -17,6 +17,9 @@
     "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.0"
   },
+  "engines": {
+  "node": ">=14 <18.17.1"
+  },
   "keywords": [],
   "devDependencies": {},
   "repository": {
