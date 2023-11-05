@@ -61,7 +61,7 @@ const updateExercise = async (req, res, next) => {
     .db('ellsworth-barbell')
     .collection('exercises')
     .replaceOne({_id: exerciseId}, exercise);
-    if (response.acknowledged) {
+    if (response.modifiedCount > 0) {
         res.status(201).json(response);
     } else {
         res.status(500).json(response.error || 'An error occurred while updating the exercise.');
