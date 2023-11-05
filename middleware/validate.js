@@ -15,7 +15,28 @@ const saveExercise = (req, res, next) => {
         if (!status){
             res.status(412).send({
                 success: false,
-                message: 'Invalid recipe format',
+                message: 'Invalid exercise format',
+                data: err
+            });
+        } else {
+            next();
+        }
+    });
+};
+
+const saveTrainer = (req, res, next) => {
+    const validationRule = {
+        firstName: { type: String, required: true },
+        lastName: { type: String, required: true},
+        specialty: {type: String, required: true},
+        hourlyRate: {type: Number, required: true},
+        scheduleAvailability: {type: String, required: true}
+    };
+    validator(req.body, validationRule, {}, (err, status) => {
+        if (!status){
+            res.status(412).send({
+                success: false,
+                message: 'Invalid trainer format',
                 data: err
             });
         } else {
@@ -25,5 +46,6 @@ const saveExercise = (req, res, next) => {
 };
 
 module.exports = {
-    saveExercise
+    saveExercise,
+    saveTrainer
 }

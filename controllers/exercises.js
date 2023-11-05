@@ -64,7 +64,7 @@ const updateExercise = async (req, res, next) => {
     if (response.acknowledged) {
         res.status(201).json(response);
     } else {
-        res.status(500).json(response.error || 'An error occurred while creating the exercise.');
+        res.status(500).json(response.error || 'An error occurred while updating the exercise.');
     }
 }
 

@@ -43,28 +43,28 @@
               "type": "object",
               "properties": {
                 "exerciseName": {
-                  "example": "Deadlift"
+                  "example": "any"
                 },
                 "minutes": {
-                  "example": 30
+                  "example": "any"
                 },
                 "calories": {
-                  "example": 500
+                  "example": "any"
                 },
                 "maxReps": {
-                  "example": 10
+                  "example": "any"
                 },
                 "weight": {
-                  "example": 340
+                  "example": "any"
                 },
                 "distance": {
-                  "example": 4
+                  "example": "any"
                 },
                 "heartRate": {
-                  "example": 121
+                  "example": "any"
                 },
                 "notes": {
-                  "example": "Lift with your legs"
+                  "example": "any"
                 }
               }
             }
@@ -119,28 +119,167 @@
               "type": "object",
               "properties": {
                 "exerciseName": {
-                  "example": "Deadlift"
+                  "example": "any"
                 },
                 "minutes": {
-                  "example": 30
+                  "example": "any"
                 },
                 "calories": {
-                  "example": 500
+                  "example": "any"
                 },
                 "maxReps": {
-                  "example": 10
+                  "example": "any"
                 },
                 "weight": {
-                  "example": 340
+                  "example": "any"
                 },
                 "distance": {
-                  "example": 4
+                  "example": "any"
                 },
                 "heartRate": {
-                  "example": 121
+                  "example": "any"
                 },
                 "notes": {
-                  "example": "Lift with your legs"
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/trainers/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "specialty": {
+                  "example": "any"
+                },
+                "hourlyRate": {
+                  "example": "any"
+                },
+                "scheduleAvailability": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/trainers/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "specialty": {
+                  "example": "any"
+                },
+                "hourlyRate": {
+                  "example": "any"
+                },
+                "scheduleAvailability": {
+                  "example": "any"
                 }
               }
             }

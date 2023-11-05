@@ -2,8 +2,14 @@
 ### Get all exercises
 GET http://localhost:3000/exercises
 
+###
+GET http://localhost:3000/trainers
+
 ### Get single exercise
 GET http://localhost:3000/exercises/id
+
+###
+GET http://localhost:3000/trainers/6547170cfd56187d7cc772d1
 
 ### Post new exercise
 POST http://localhost:3000/exercises HTTP/1.1
@@ -20,14 +26,26 @@ content-type: application/json
   "notes": "This was a good set"
 }
 
+### POST new trainer
+POST http://localhost:3000/trainers HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Jason",
+  "lastName": "Heiner",
+  "specialty": "Body Building",
+  "hourlyRate": 18.00,
+  "scheduleAvailability": "Monday through Friday 4-7pm"
+}
+
 ### Update exercise
 PUT http://localhost:3000/exercises/6547072348d3b0b83f7c3e90 HTTP/1.1
 content-type: application/json
 
 {
   "exerciseName": "Deadlift",
-  "minutes": "30",
-  "calories": "500",
+  "minutes": 30,
+  "calories": 500,
   "maxReps": 10,
   "weight": 240,
   "distance": 3,
@@ -35,5 +53,20 @@ content-type: application/json
   "notes": "This was a good set"
 }
 
+### Update trainer information
+PUT http://localhost:3000/trainers/6547170cfd56187d7cc772d1 HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Jason",
+  "lastName": "Heiner",
+  "specialty": "Body Building",
+  "hourlyRate": 22.00,
+  "scheduleAvailability": "Monday through Friday 4-7pm"
+}
+
 ### 
 DELETE http://localhost:3000/exercises/6547072348d3b0b83f7c3e90 HTTP/1.1
+
+### 
+DELETE http://localhost:3000/trainers/6547170cfd56187d7cc772d1 HTTP/1.1
