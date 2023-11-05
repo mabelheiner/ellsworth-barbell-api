@@ -2,14 +2,15 @@ const express = require('express');
 const router = express.Router();
 
 const exerciseController = require('../controllers/exercises');
+const validation = require('../middleware/validate');
 
 router.get('/', exerciseController.getAll);
 
 router.get('/:id', exerciseController.getSingle);
 
-router.post('/', exerciseController.createExercise);
+router.post('/', validation.saveExercise, exerciseController.createExercise);
 
-router.put('/:id', exerciseController.updateExercise);
+router.put('/:id', validation.saveExercise, exerciseController.updateExercise);
 
 router.delete('/:id', exerciseController.deleteExercise);
 

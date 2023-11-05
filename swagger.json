@@ -35,15 +35,50 @@
       },
       "post": {
         "description": "",
-        "produces": [
-          "application/json"
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exerciseName": {
+                  "example": "Deadlift"
+                },
+                "minutes": {
+                  "example": 30
+                },
+                "calories": {
+                  "example": 500
+                },
+                "maxReps": {
+                  "example": 10
+                },
+                "weight": {
+                  "example": 340
+                },
+                "distance": {
+                  "example": 4
+                },
+                "heartRate": {
+                  "example": 121
+                },
+                "notes": {
+                  "example": "Lift with your legs"
+                }
+              }
+            }
+          }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
-          },
           "201": {
             "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -76,14 +111,50 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exerciseName": {
+                  "example": "Deadlift"
+                },
+                "minutes": {
+                  "example": 30
+                },
+                "calories": {
+                  "example": 500
+                },
+                "maxReps": {
+                  "example": 10
+                },
+                "weight": {
+                  "example": 340
+                },
+                "distance": {
+                  "example": 4
+                },
+                "heartRate": {
+                  "example": 121
+                },
+                "notes": {
+                  "example": "Lift with your legs"
+                }
+              }
+            }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           },
-          "204": {
-            "description": "No Content"
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -100,6 +171,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }

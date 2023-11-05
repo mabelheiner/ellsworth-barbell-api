@@ -1,0 +1,39 @@
+### LOCAL HOST
+### Get all exercises
+GET http://localhost:3000/exercises
+
+### Get single exercise
+GET http://localhost:3000/exercises/id
+
+### Post new exercise
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+  "exerciseName": "Jumping",
+  "minutes": 30,
+  "calories": 500,
+  "maxReps": 7,
+  "weight": 240,
+  "distance": 3,
+  "heartRate": 121,
+  "notes": "This was a good set"
+}
+
+### Update exercise
+PUT http://localhost:3000/exercises/6547072348d3b0b83f7c3e90 HTTP/1.1
+content-type: application/json
+
+{
+  "exerciseName": "Deadlift",
+  "minutes": "30",
+  "calories": "500",
+  "maxReps": 10,
+  "weight": 240,
+  "distance": 3,
+  "heartRate": 121,
+  "notes": "This was a good set"
+}
+
+### 
+DELETE http://localhost:3000/exercises/6547072348d3b0b83f7c3e90 HTTP/1.1
